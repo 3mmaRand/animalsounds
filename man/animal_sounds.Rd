@@ -12,10 +12,10 @@ animal_sounds(animal, sound)
 \item{sound}{input from the user}
 }
 \value{
-a string that prints "the {animal} goes {sound}, {sound}!"
+a string that prints "the \emph{animal} goes \emph{sound}, \emph{sound}!"
 }
 \description{
-Print a sentence saying what sound an animal makes from user inputs
+This function uses \code{\link[base:paste]{base::paste0()}} to create a sentence that describes the sound an animal makes. You provide the \strong{animal} and the \strong{sound} as inputs.
 }
 \examples{
 animal_sounds("dog", "woof")
