@@ -13,7 +13,8 @@
 #' animal_sounds("cat", "meow")
 
 animal_sounds <- function(animal, sound) {
-  stopifnot(is.character(animal), length(animal) == 1)
-  stopifnot(is.character(sound), length(sound) == 1)
+  if (!rlang::is_character(sound, n = 1)) {
+    cli::cli_abort("`sound` must be a single string!")
+  }
   paste0("the ", animal, " goes ", sound, " ", sound, "!" )
 }
